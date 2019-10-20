@@ -23,6 +23,7 @@ static NSString* RNPStatusRestricted = @"restricted";
 typedef NS_ENUM(NSInteger, RNPType) {
     RNPTypeUnknown,
     RNPTypeCamera,
+    RNPTypePhoto,
 };
 
 @interface RCTConvert (RNPStatus)

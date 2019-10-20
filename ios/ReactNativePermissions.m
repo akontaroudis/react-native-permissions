@@ -35,6 +35,7 @@
 #endif
 
 #import "RNPAudioVideo.h"
+#import "RNPPhoto.h"
 
 @interface ReactNativePermissions()
 
@@ -103,6 +104,9 @@ RCT_REMAP_METHOD(getPermissionStatus, getPermissionStatus:(RNPType)type json:(id
         case RNPTypeCamera:
             status = [RNPAudioVideo getStatus:@"video"];
             break;
+        case RNPTypePhoto:
+            status = [RNPPhoto getStatus];
+            break;
         default:
             break;
     }
@@ -117,6 +121,8 @@ RCT_REMAP_METHOD(requestPermission, permissionType:(RNPType)type json:(id)json r
     switch (type) {
         case RNPTypeCamera:
             return [RNPAudioVideo request:@"video" completionHandler:resolve];
+        case RNPTypePhoto:
+            return [RNPPhoto request:resolve];
         default:
             break;
     }
