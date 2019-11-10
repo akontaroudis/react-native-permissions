@@ -39,7 +39,7 @@
 #import "RNPNotification.h"
 
 @interface ReactNativePermissions()
-
+@property (strong, nonatomic) RNPNotification *notificationMgr;
 @end
 
 @implementation ReactNativePermissions
