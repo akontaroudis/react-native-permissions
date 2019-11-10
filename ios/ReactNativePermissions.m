@@ -36,6 +36,7 @@
 
 #import "RNPAudioVideo.h"
 #import "RNPPhoto.h"
+#import "RNPNotification.h"
 
 @interface ReactNativePermissions()
 
@@ -107,6 +108,9 @@ RCT_REMAP_METHOD(getPermissionStatus, getPermissionStatus:(RNPType)type json:(id
         case RNPTypePhoto:
             status = [RNPPhoto getStatus];
             break;
+        case RNPTypeNotification:
+            status = [RNPNotification getStatus];
+            break;
         default:
             break;
     }
@@ -123,11 +127,33 @@ RCT_REMAP_METHOD(requestPermission, permissionType:(RNPType)type json:(id)json r
             return [RNPAudioVideo request:@"video" completionHandler:resolve];
         case RNPTypePhoto:
             return [RNPPhoto request:resolve];
+        case RNPTypeNotification:
+            return [self requestNotification:json resolve:resolve];
         default:
             break;
     }
+}
+
+- (void) requestNotification:(id)json resolve:(RCTPromiseResolveBlock)resolve
+{
+    NSArray *typeStrings = [RCTConvert NSArray:json];
+
+    UIUserNotificationType types;
+    if ([typeStrings containsObject:@"alert"])
+        types = types | UIUserNotificationTypeAlert;
+
+    if ([typeStrings containsObject:@"badge"])
+        types = types | UIUserNotificationTypeBadge;
+
+    if ([typeStrings containsObject:@"sound"])
+        types = types | UIUserNotificationTypeSound;
 
 
+    if (self.notificationMgr == nil) {
+        self.notificationMgr = [[RNPNotification alloc] init];
+    }
+
+    [self.notificationMgr request:types completionHandler:resolve];
 }
 
 @end

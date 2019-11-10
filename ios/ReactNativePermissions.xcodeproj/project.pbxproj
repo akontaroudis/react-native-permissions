@@ -11,6 +11,7 @@
 		669581F71FE4416B008596CD /* RCTConvert+RNPStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581F41FE4416B008596CD /* RCTConvert+RNPStatus.m */; };
 		669581F81FE4416B008596CD /* ReactNativePermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 669581F51FE4416B008596CD /* ReactNativePermissions.m */; };
 		669582131FE441A8008596CD /* RNPAudioVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 669582071FE441A7008596CD /* RNPAudioVideo.m */; };
+		FA5BB02723787D5B009D0507 /* RNPNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5BB02623787D5B009D0507 /* RNPNotification.m */; };
 		FAF9A431235B4032000FD688 /* RNPPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = FAF9A42F235B4032000FD688 /* RNPPhoto.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		669582041FE441A7008596CD /* RNPAudioVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPAudioVideo.h; sourceTree = "<group>"; };
 		669582071FE441A7008596CD /* RNPAudioVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPAudioVideo.m; sourceTree = "<group>"; };
 		9D23B34F1C767B80008B4819 /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libReactNativePermissions.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5BB02523787D55009D0507 /* RNPNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPNotification.h; sourceTree = "<group>"; };
+		FA5BB02623787D5B009D0507 /* RNPNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPNotification.m; sourceTree = "<group>"; };
 		FAF9A42F235B4032000FD688 /* RNPPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNPPhoto.m; sourceTree = "<group>"; };
 		FAF9A430235B4032000FD688 /* RNPPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNPPhoto.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +65,8 @@
 		669581FA1FE44191008596CD /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
+				FA5BB02523787D55009D0507 /* RNPNotification.h */,
+				FA5BB02623787D5B009D0507 /* RNPNotification.m */,
 				FAF9A430235B4032000FD688 /* RNPPhoto.h */,
 				FAF9A42F235B4032000FD688 /* RNPPhoto.m */,
 				669582041FE441A7008596CD /* RNPAudioVideo.h */,
@@ -150,6 +155,7 @@
 			files = (
 				669581F71FE4416B008596CD /* RCTConvert+RNPStatus.m in Sources */,
 				669582131FE441A8008596CD /* RNPAudioVideo.m in Sources */,
+				FA5BB02723787D5B009D0507 /* RNPNotification.m in Sources */,
 				669581F81FE4416B008596CD /* ReactNativePermissions.m in Sources */,
 				FAF9A431235B4032000FD688 /* RNPPhoto.m in Sources */,
 			);
